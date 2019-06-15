@@ -1,0 +1,60 @@
+html, body, ul, li, form, input {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    /* text-align: center; */
+}
+
+input, li {
+    padding: 20px 30px;
+    background: #fff;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+li {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+ul {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#todo-form {
+    position: relative;
+}
+
+#todo-form.loading::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    top: 0;
+    border-top: 3px solid rgba(255, 255, 255, 0.2);
+    border-right: 3px solid grey;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+    border-left: 3px solid grey;
+    border-radius: 50%;
+    animation: spin 0.5s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
