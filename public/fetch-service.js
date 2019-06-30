@@ -1,7 +1,7 @@
 function FetchEvents() {
   const url = 'http://localhost:3000/tasks';
 
-  function submitTodoTask(searchTerm) {
+  function postTodoTask(searchTerm) {
     const options = {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -11,8 +11,12 @@ function FetchEvents() {
       .then((response) => response.json);
   }
 
+  function getTodoTask() {
+    return fetch(url);
+  }
 
   return {
-    submitTodoTask
+    postTodoTask,
+    getTodoTask
   };
 }

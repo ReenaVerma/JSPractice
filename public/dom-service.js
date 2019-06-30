@@ -1,11 +1,9 @@
 function DomEvents() {
-
   const form            = document.getElementById('form');
   const tasksContainer  = document.getElementById('tasksContainer');
   const todoTaskInput   = document.getElementById('task');
   const todoDateInput   = document.getElementById('date');
   let individualTasks   = '';
-
 
   function getFormElement(){
     return form;
@@ -19,29 +17,18 @@ function DomEvents() {
     return data;
   }
 
-
-
-  function fetchTodoTasks() {
-    fetch('http://localhost:3000/tasks')
-
-      .then(res => res.json())
-      .then(res => {
-        const lastTask = (res[Object.keys(res).length-1]);
-        individualTasks +=
-          `<div class="todoStyle">
-            <p>${lastTask.date}: ${lastTask.todo}</p>
-          </div>`;
-        tasksContainer.innerHTML = individualTasks;
-
-      })
-      .catch(
-        error => console.error(error)
-      );
+  function displayLastTask(lastTask) {
+    individualTasks +=
+      `<div class="todoStyle">
+        <p>Date: ${lastTask.date}: Task: ${lastTask.todo}</p>
+      </div>`;
+    tasksContainer.innerHTML = individualTasks;
+    return tasksContainer;
   }
 
   return {
     getFormElement,
-    fetchTodoTasks,
-    getSearchTerm
+    getSearchTerm,
+    displayLastTask
   };
 }
