@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchTerm = DomEvents().getSearchTerm();
     fetchService.postTodoTask(searchTerm);
 
-    fetchService.getTodoTask()
+    fetchService.getTodoTasks()
       .then(res => res.json())
       .then(res => {
         const lastTask = (res[Object.keys(res).length-1]);

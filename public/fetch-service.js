@@ -11,12 +11,12 @@ function FetchEvents() {
       .then((response) => response.json);
   }
 
-  function getTodoTask() {
+  function getTodoTasks() {
     return fetch(url);
   }
 
   return {
     postTodoTask,
-    getTodoTask
+    getTodoTasks
   };
 }
