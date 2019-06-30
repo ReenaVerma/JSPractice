@@ -1,36 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  const domEvents   = DomEvents();
+  const searchForm  = DomEvents().getFormElement();
 
 
-  const results = document.getElementById('results');
-  let node = '';
+  searchForm.addEventListener('submit', function(event){
+    event.preventDefault();
 
+    domEvents.submitTodoTask();
 
-  fetch('http://localhost:3000/tasks')
-
-    .then(res => res.json())
-    .then(res => {
-      console.log(res);
-
-
-      res.forEach(elem => {
-
-        node +=
-          `<div>
-            <p>${elem.todo}</p>
-            <p>${elem.date}</p>
-            <p>${elem.urgency}</p>
-          </div>
-          `;
-
-        results.innerHTML = node;
-        console.log(node);
-      });
-
-
-    })
-    .catch(
-      error => console.error(error)
-    );
+  });
 
 });
