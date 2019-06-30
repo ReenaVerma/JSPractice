@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "todo": "Buy food",
+      "date": "today",
+      "urgency": "high"
+    },
+    {
+      "id": 2,
+      "todo": "Cook food",
+      "date": "today",
+      "urgency": "low"
+    },
+    {
+      "id": 3,
+      "todo": "Eat food",
+      "date": "today",
+      "urgency": "medium"
+    }
+  ]
+}
