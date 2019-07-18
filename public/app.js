@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchForm      = DomEvents().getFormElement();
   const fetchService    = FetchEvents();
 
+
   searchForm.addEventListener('submit', function(event){
     event.preventDefault();
 
@@ -14,6 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(res => {
         const lastTask = (res[Object.keys(res).length-1]);
         domEvents.displayLastTask(lastTask);
+
+
+        document.getElementById('id').addEventListener('click', function(event){
+          event.preventDefault();
+          console.log('clicked');
+
+          var divs = document.querySelectorAll('div');
+          for (var i = 0; i < divs.length; i++) {
+            var id = divs[i].getAttribute('id');
+            fetchService.deleteTodoTask(id);
+          }
+        });
+
       });
   });
+
 });

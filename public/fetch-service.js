@@ -15,8 +15,17 @@ function FetchEvents() {
     return fetch(url);
   }
 
+  function deleteTodoTask(id) {
+    const options = {
+      method: 'DELETE'
+    };
+    return fetch(`${url}/${id}`, options);
+  }
+
+
   return {
     postTodoTask,
-    getTodoTasks
+    getTodoTasks,
+    deleteTodoTask
   };
 }

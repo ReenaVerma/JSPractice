@@ -1,34 +1,3 @@
 {
-  "tasks": [
-    {
-      "todo": "woof",
-      "date": "woof",
-      "id": 1
-    },
-    {
-      "todo": "cat",
-      "date": "dog",
-      "id": 2
-    },
-    {
-      "todo": "hello",
-      "date": "PB",
-      "id": 3
-    },
-    {
-      "todo": "dog",
-      "date": "cat",
-      "id": 4
-    },
-    {
-      "todo": "hiuhiuh",
-      "date": "joijo",
-      "id": 5
-    },
-    {
-      "todo": "hdhdh",
-      "date": "jdjd",
-      "id": 6
-    }
-  ]
+  "tasks": []
 }
