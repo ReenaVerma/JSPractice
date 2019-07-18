@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const lastTask = (res[Object.keys(res).length-1]);
         domEvents.displayLastTask(lastTask);
 
-
-        document.getElementById('id').addEventListener('click', function(event){
+        document.getElementById('deleteButton').addEventListener('click', function(event){
           event.preventDefault();
           console.log('clicked');
 

@@ -3,7 +3,7 @@ function DomEvents() {
   const tasksContainer  = document.getElementById('tasksContainer');
   const todoTaskInput   = document.getElementById('task');
   const todoDateInput   = document.getElementById('date');
-  const deleteButton    = document.getElementById('id');
+  const deleteButton    = document.getElementById('deleteButton');
   let individualTasks   = '';
 
   function getFormElement(){
@@ -23,7 +23,7 @@ function DomEvents() {
     individualTasks +=
       `<div class="todoStyle" id=${lastTask.id}>
         <p>Date: ${lastTask.date}: Task: ${lastTask.todo}</p>
-        <button class="deleteButton" id="id">Delete</button>
+        <button class="deleteButton" id="deleteButton">Delete</button>
       </div>`;
     tasksContainer.innerHTML = individualTasks;
     return tasksContainer;
