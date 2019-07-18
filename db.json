@@ -1,24 +1,3 @@
 {
-  "tasks": [
-    {
-      "todo": "one",
-      "date": "one",
-      "id": 1
-    },
-    {
-      "todo": "one",
-      "date": "one",
-      "id": 2
-    },
-    {
-      "todo": "tw",
-      "date": "tw",
-      "id": 3
-    },
-    {
-      "todo": "four",
-      "date": "four",
-      "id": 4
-    }
-  ]
+  "tasks": []
 }

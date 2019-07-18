@@ -15,13 +15,20 @@ function FetchEvents() {
     return fetch(url);
   }
 
-  function deleteTodoTask(id) {
+  function deleteTodoTask(res) {
     const options = {
       method: 'DELETE'
     };
-    return fetch(`${url}/${id}`, options);
-  }
+    console.log('res from dom', res);
 
+    res.forEach(elem => {
+      document.getElementById('deleteButton').addEventListener('click', function(event){
+        event.preventDefault();
+        console.log('clicked', elem.id);
+        return fetch(`${url}/${elem.id}`, options);
+      });
+    });
+  }
 
   return {
     postTodoTask,

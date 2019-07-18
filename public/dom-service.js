@@ -1,4 +1,4 @@
-function DomEvents() {
+function DomService() {
   const form            = document.getElementById('form');
   const tasksContainer  = document.getElementById('tasksContainer');
   const todoTaskInput   = document.getElementById('task');
@@ -18,14 +18,19 @@ function DomEvents() {
     return data;
   }
 
-  function displayLastTask(lastTask) {
-    console.log(lastTask);
+  function displayLastTask(res) {
+    console.log(res);
+
+    const lastTask = (res[Object.keys(res).length-1]);
+
     individualTasks +=
-      `<div class="todoStyle" id=${lastTask.id}>
-        <p>Date: ${lastTask.date}: Task: ${lastTask.todo}</p>
-        <button class="deleteButton" id="deleteButton">Delete</button>
-      </div>`;
+        `<div class="todoStyle" id=${lastTask.id}>
+          <p>
+          <p>Date: ${lastTask.date}: Task: ${lastTask.todo}</p>
+          <button class="deleteButton" id="deleteButton">Delete</button>
+        </div>`;
     tasksContainer.innerHTML = individualTasks;
+
     return tasksContainer;
   }
 
@@ -33,10 +38,20 @@ function DomEvents() {
     return deleteButton;
   }
 
+  function turnLoadingStateOn() {
+    return setTimeout(form.classList.add('loader'), 5000);
+  }
+
+  function turnLoadingStateOff() {
+    return form.classList.remove('loader');
+  }
+
   return {
     getFormElement,
     getSearchTerm,
     displayLastTask,
-    getDeleteButton
+    getDeleteButton,
+    turnLoadingStateOn,
+    turnLoadingStateOff
   };
 }
