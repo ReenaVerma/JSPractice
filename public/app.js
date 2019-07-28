@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const searchTerm = DomService().getSearchTerm();
     fetchService.postTodoTask(searchTerm);
-    domService.turnLoadingStateOn();
+    // domService.turnLoadingStateOn();
 
     fetchService.getTodoTasks()
       .then(res => res.json())
       .then(res => {
-        domService.turnLoadingStateOff();
-        domService.displayLastTask(res);
-        fetchService.deleteTodoTask(res);
+        // domService.turnLoadingStateOff();
+        domService.turnLoadingStateOn(res);
+        // fetchService.deleteTodoTask(res);
       });
   });
 });
