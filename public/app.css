@@ -46,7 +46,7 @@ form {
 }
 
 input {
-  width: 200px;
+  width: 250px;
   height: 60px;
   margin: 0px auto;
   border: 0;
@@ -61,7 +61,7 @@ input::placeholder {
   font-family: 'Share Tech Mono', monospace;
 }
 
-input[type="text"] {
+input[type="text"], [type="date"] {
   font-size: 20px;
   color: #e4e4e4;
   font-family: 'Share Tech Mono', monospace;
