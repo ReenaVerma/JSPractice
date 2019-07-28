@@ -1,19 +1,126 @@
-.todoStyle {
+html {
+  height: 100%;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ background: #70bg32;
+ background-repeat:no-repeat;
+ background: -webkit-linear-gradient( to left bottom, #8A2387, #E94057, #F27121);
+ background: -moz-linear-gradient( to left bottom, #8A2387, #E94057, #F27121);
+ background: -ms-linear-gradient( to left bottom, #8A2387, #E94057, #F27121);
+ background: -o-linear-gradient( to left bottom, #8A2387, #E94057, #F27121);
+ background: linear-gradient( to left bottom, #8A2387, #E94057, #F27121);
+}
+body {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+main {
+  width: 80%;
+  margin: 0px auto;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+p {
+    color: #666;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+label {
+  font-size: 20px;
+}
+
+form {
+  /* border-bottom: 1px solid #fff; */
+  /* margin-top: 100px; */
+  text-align:center;
+  width: 100%;
+}
+
+input {
   width: 200px;
-  border: 1px solid #e4e4e4;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 5px;
+  height: 60px;
+  margin: 0px auto;
+  border: 0;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #ccc;
+}
+
+input::placeholder {
+  font-size: 20px;
+  color: #e4e4e4;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  color: #e4e4e4;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: #e4e4e4;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+button[type=submit] {
+  width: 10%;
+  margin: 20px;
+  height: 50px;
+}
+
+.tasksContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.todoStyle {
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  display: inline-block;
+  height: 100px;
+  margin: 1rem;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+svg#deleteButton {
+    color: red;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.loaderContainer {
+  height: 100px;
+  margin: 0px auto;
 }
 
 .loader {
+  margin: 0px auto;
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid #3498db; /* Blue */
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 30px;
+  height: 30px;
   animation: spin 2s linear infinite;
 }
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }

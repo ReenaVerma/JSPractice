@@ -1,39 +1,5 @@
 {
   "tasks": [
-    {
-      "todo": "reena",
-      "date": "verma",
-      "id": 1
-    },
-    {
-      "todo": "dog",
-      "date": "dog",
-      "id": 2
-    },
-    {
-      "todo": "dwdw",
-      "date": "lplp",
-      "id": 3
-    },
-    {
-      "todo": "dog",
-      "date": "one",
-      "id": 4
-    },
-    {
-      "todo": "dwdw",
-      "date": "omomomom",
-      "id": 5
-    },
-    {
-      "todo": "dd",
-      "date": "dd",
-      "id": 6
-    },
-    {
-      "todo": "ll",
-      "date": "ll",
-      "id": 7
-    }
+
   ]
 }

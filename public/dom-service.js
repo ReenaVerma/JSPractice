@@ -22,29 +22,28 @@ function DomService() {
 
   async function turnLoadingStateOn(res) {
     setTimeout(loader.classList.add('loader'), 2000);
-    console.log('calling');
-    var result = await displayLastTask(res);
-    console.log('result', result);
+    await displayLastTask(res);
   }
 
   function displayLastTask(res) {
-    console.log(res);
     const lastTask = (res[Object.keys(res).length-1]);
-
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(
           individualTasks +=
-            `<div class="todoStyle" id=${lastTask.id}>
-              <p>
-              <p>Date: ${lastTask.date}: Task: ${lastTask.todo}</p>
-              <button class="deleteButton" id="deleteButton">Delete</button>
+            `<div class="todoStyle" id=${lastTask.id} style="display: flex; justify-content: space-between">
+                <div class="text">
+                  <p>Date: ${lastTask.date}</p>
+                  <p>Task: ${lastTask.todo}</p>
+              </div>
+              <div class-"icon">
+                  <i class="far fa-calendar-times" id="deleteButton"></i>
+              </div>
             </div>`
         );
         tasksContainer.innerHTML = individualTasks;
         loader.classList.remove('loader');
         return tasksContainer;
-
       }, 2000);
     });
   }

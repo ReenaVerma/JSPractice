@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Todo App</title>
+    <title>Todo App (using JSON Server)</title>
     <link rel="stylesheet" href="app.css">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="app.js" charset="utf-8"></script>
     <script src="dom-service.js" charset="utf-8"></script>
     <script src="fetch-service.js" charset="utf-8"></script>
@@ -12,22 +14,21 @@
 
   <body>
     <main>
-      <h1>Todo App</h1>
-      <p id="erroPlaceholder"></p>
-      <p id="resultsText"></p>
-      <div id="loader"></div>
+      <h1>Todo App (using JSON Server)</h1>
+      <div class="loaderContainer">
+        <div id="loader"></div>
+      </div>
 
-      <!-- <div id="message"></div> -->
       <section>
             <form id="form">
-              <input type="text" name="task" value="" id="task" placeholder="Create task...">
-              <input type="text" name="date" value="" id="date" placeholder="">
-              <button type="submit">submit</button>
+                <!-- <label for="male">Task:</label> -->
+                <input type="text" name="task" value="" id="task" placeholder="Enter task...">
+                <!-- <label for="male">Date:</label> -->
+                <input type="text" name="date" value="" id="date" placeholder="Enter date...">
+                <button type="submit">submit</button>
             </form>
       </section>
-
-      <section id="tasksContainer">
-
+      <section id="tasksContainer" class="tasksContainer">
       </section>
   </main>
   </body>
