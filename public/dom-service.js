@@ -5,7 +5,7 @@ function DomService() {
   const tasksContainer  = document.getElementById('tasksContainer');
   const todoTaskInput   = document.getElementById('task');
   const todoDateInput   = document.getElementById('date');
-  const deleteButton    = document.getElementById('deleteButton');
+  const deleteButton    = document.getElementById('id');
   let individualTasks   = '';
 
   function getFormElement(){
@@ -37,7 +37,7 @@ function DomService() {
                   <p>Task: ${lastTask.todo}</p>
               </div>
               <div class-"icon">
-                  <i class="far fa-calendar-times" id="deleteButton"></i>
+                  <i class="far fa-calendar-times deleteButton" id="id"></i>
               </div>
             </div>`
         );

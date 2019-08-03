@@ -98,10 +98,11 @@ button[type=submit] {
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-svg#deleteButton {
+svg#id {
+    margin-top: 10px;
+    margin-right: 10px;
     color: red;
-    margin-top: 15px;
-    margin-right: 20px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.10), 0 5px 5px rgba(0,0,0,0.10);
 }
 
 .loaderContainer {

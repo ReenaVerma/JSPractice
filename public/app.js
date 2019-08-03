@@ -12,7 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(res => res.json())
       .then(res => {
         domService.turnLoadingStateOn(res);
-        // fetchService.deleteTodoTask(res);
+
+        setTimeout(() => {
+          document.getElementById('id').addEventListener('click', function(event){
+            event.preventDefault();
+            console.log('clicked');
+
+            var divs = document.querySelectorAll('div');
+            for (var i = 0; i < divs.length; i++) {
+              var id = divs[i].getAttribute('id');
+              divs[i].parentElement.removeChild(divs[i]);
+              fetchService.deleteTodoTask(id);
+            }
+          });
+        },3000);
       });
   });
 });

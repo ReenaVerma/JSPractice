@@ -1,38 +1,33 @@
 {
   "tasks": [
     {
-      "todo": "n",
-      "date": "m",
-      "id": 1
-    },
-    {
-      "todo": "Bring me food",
-      "date": "now",
+      "todo": "dog",
+      "date": "2019-08-08",
       "id": 2
     },
     {
-      "todo": "make coffee",
-      "date": "date",
+      "todo": "dog",
+      "date": "2019-08-08",
       "id": 3
     },
     {
-      "todo": "l",
-      "date": "2019-07-04",
+      "todo": "dog",
+      "date": "2019-08-14",
       "id": 4
     },
     {
-      "todo": "bring me feojifoewj",
-      "date": "2019-07-25",
+      "todo": "james",
+      "date": "2019-08-15",
       "id": 5
     },
     {
-      "todo": "dog",
-      "date": "2019-07-12",
+      "todo": "harry",
+      "date": "2019-08-23",
       "id": 6
     },
     {
-      "todo": "n",
-      "date": "2019-07-12",
+      "todo": "dog",
+      "date": "2019-08-09",
       "id": 7
     }
   ]
