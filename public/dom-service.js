@@ -27,6 +27,7 @@ function DomService() {
 
   function displayLastTask(res) {
     const lastTask = (res[Object.keys(res).length-1]);
+
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(
@@ -36,8 +37,8 @@ function DomService() {
                   <p>Date: ${lastTask.date}</p>
                   <p>Task: ${lastTask.todo}</p>
               </div>
-              <div class-"icon">
-                  <i class="far fa-calendar-times deleteButton" id="id"></i>
+              <div class-"icon" data-key="${lastTask.id}">
+                    <img src="images/icon.png" class="deleteButton js-delete-todo"></img>
               </div>
             </div>`
         );
@@ -46,6 +47,7 @@ function DomService() {
         return tasksContainer;
       }, 2000);
     });
+
   }
 
   function getDeleteButton() {

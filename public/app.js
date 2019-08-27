@@ -12,20 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(res => res.json())
       .then(res => {
         domService.turnLoadingStateOn(res);
-
-        setTimeout(() => {
-          document.getElementById('id').addEventListener('click', function(event){
-            event.preventDefault();
-            console.log('clicked');
-
-            var divs = document.querySelectorAll('div');
-            for (var i = 0; i < divs.length; i++) {
-              var id = divs[i].getAttribute('id');
-              divs[i].parentElement.removeChild(divs[i]);
-              fetchService.deleteTodoTask(id);
-            }
-          });
-        },3000);
       });
+
+    const list = document.querySelector('.js-todo-list');
+    list.addEventListener('click', event => {
+
+      if (event.target.classList.contains('js-delete-todo')) {
+        const itemKey = event.target.parentElement.dataset.key;
+        const id = itemKey;
+        var elem = document.getElementById(id);
+        elem.parentNode.removeChild(elem);
+        fetchService.deleteTodoTask(id);
+      }
+    });
   });
 });
