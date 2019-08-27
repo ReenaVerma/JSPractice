@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     list.addEventListener('click', event => {
 
       if (event.target.classList.contains('js-delete-todo')) {
-        const itemKey = event.target.parentElement.dataset.key;
-        const id = itemKey;
+        const id = event.target.parentElement.dataset.key;;
         var elem = document.getElementById(id);
         elem.parentNode.removeChild(elem);
         fetchService.deleteTodoTask(id);

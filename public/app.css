@@ -98,11 +98,9 @@ button[type=submit] {
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-svg#id {
-    margin-top: 10px;
-    margin-right: 10px;
+svg.svg-inline--fa.fa-calendar-times.fa-w-14.deleteButton.js-delete-todo {
     color: red;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.10), 0 5px 5px rgba(0,0,0,0.10);
+    padding: 5px;
 }
 
 .loaderContainer {

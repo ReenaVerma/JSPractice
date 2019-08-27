@@ -19,7 +19,7 @@ function FetchEvents() {
     const options = {
       method: 'DELETE'
     };
-    return fetch(`${url}/${id}`, options);
+    fetch(`${url}/${id}`, options);
   }
 
   return {

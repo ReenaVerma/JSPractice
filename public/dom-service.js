@@ -5,7 +5,6 @@ function DomService() {
   const tasksContainer  = document.getElementById('tasksContainer');
   const todoTaskInput   = document.getElementById('task');
   const todoDateInput   = document.getElementById('date');
-  const deleteButton    = document.getElementById('id');
   let individualTasks   = '';
 
   function getFormElement(){
@@ -38,7 +37,7 @@ function DomService() {
                   <p>Task: ${lastTask.todo}</p>
               </div>
               <div class-"icon" data-key="${lastTask.id}">
-                    <img src="images/icon.png" class="deleteButton js-delete-todo"></img>
+                    <i class="far fa-calendar-times deleteButton js-delete-todo"></i>
               </div>
             </div>`
         );
@@ -47,17 +46,11 @@ function DomService() {
         return tasksContainer;
       }, 2000);
     });
-
-  }
-
-  function getDeleteButton() {
-    return deleteButton;
   }
 
   return {
     getFormElement,
     getSearchTerm,
-    turnLoadingStateOn,
-    getDeleteButton
+    turnLoadingStateOn
   };
 }
