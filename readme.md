@@ -1,4 +1,5 @@
-# Todo App Task
+# Todo App Task & Async Await Practice
+# Maintain use of factory functions and clean code
 
 Implement a simple todo app
 
